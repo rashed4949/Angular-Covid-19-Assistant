@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+ @import '~bootstrap/dist/css/bootstrap.min.css'; 
+
+
+/* @import './assets/css/bootstrap.min.css';
+@import './assets/css/font-awesome.min.css';
+@import './assets/css/animate.css';
+@import './assets/css/versions.css';
+@import './assets/css/owl.carousel.css';
+@import './assets/css/owl.theme.default.min.css';
+@import './assets/css/tooplate-style.css'; */
