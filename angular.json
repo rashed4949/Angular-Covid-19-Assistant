@@ -24,9 +24,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+"src/assets/css/font-awesome.min.css",
+"src/assets/css/animate.css",
+"src/assets/css/owl.carousel.css",
+"src/assets/css/owl.theme.default.min.css",
+"src/assets/css/tooplate-style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/jquery.sticky.js",
+              "src/assets/js/jquery.stellar.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/smoothscroll.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/custom.js"
+  
+            ]
           },
           "configurations": {
             "production": {
