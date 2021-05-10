@@ -1,0 +1,38 @@
+<div class="row"
+    style="margin-top: 5px; padding-top: 35px;background: url('assets/images/vol5.jpg') no-repeat top center;">
+    <div class="col-sm-6 col-md-8">
+        <h2 style="text-align: center;" class="wow fadeInUp" data-wow-delay="0.4s">Want to be a Volunteer?</h2>
+    </div>
+    <div class="col-sm-6  col-md-4">
+        <h2 class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s"> <a [routerLink]="'/volunteer-create'"
+                (click)="createVolunteer()" class="nav-link"><span>Join
+                    us now</span></a></h2>
+    </div>
+</div>
+<div class="container">
+    <!-- <h4 class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s">Volunteer List</h4> -->
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbkop</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Koniglich Essen</td>
+            <td>Germany</td>
+        </tr>
+    </table>
+</div>

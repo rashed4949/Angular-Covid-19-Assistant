@@ -2,116 +2,10 @@
 <html lang="en">
 
 <head>
-
-     <title>Health - Medical Website Template</title>
-     <!--
-
-Template 2098 Health
-
-http://www.tooplate.com/view/2098-health
-
--->
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="Tooplate">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
-
-     <!-- MAIN CSS -->
-     <!-- <link rel="stylesheet" href="css/tooplate-style.css"> -->
-
+     <title>covid-19-assistant</title>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
-
-     <!-- HEADER -->
-     <header>
-          <nav class="navbar navbar-expand-sm navbar-light">
-               <div class="container">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                         <ul class="navbar-nav mx-auto">
-                              <li class="nav-item">
-                                   <a href="#home" class="nav-link"><span data-hover="Home">Home</span></a>
-                              </li>
-                              <li class="nav-item">
-                                   <a href="#Test Center" class="nav-link"><span data-hover="Test Center">Test
-                                             Center</span></a>
-                              </li>
-                              <li class="nav-item">
-                                   <a href="#Vaccination Center" class="nav-link"><span
-                                             data-hover="Vaccination Center">Vaccination Center</span></a>
-                              </li>
-                              <li class="nav-item">
-                                   <a href="#Positive day" class="nav-link"><span data-hover="Resume">Positive
-                                             day</span></a>
-                              </li>
-                              <li class="nav-item">
-                                   <a href="#Mental Health" class="nav-link"><span data-hover="Contact">Mental
-                                             Health</span></a>
-                              </li>
-                              <li class="nav-item">
-                                   <a href="#Volunteer" (click)="create()" style="font-size: large;"
-                                        class="nav-link"><span data-hover="Contact">Volunteer service</span></a>
-                              </li>
-                         </ul>
-
-                    </div>
-               </div>
-          </nav>
-     </header>
-
-
-
-     <!-- HOME -->
-     <!-- <section id="home" class="slider" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                         <div class="owl-carousel owl-theme">
-                              <div class="item item-first">
-                                   <div class="caption">
-                                        <div class="col-md-offset-1 col-md-10">
-                                             <h3>Let's make your life happier</h3>
-                                             <h1>Healthy Living</h1>
-                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Meet Our Doctors</a>
-                                        </div>
-                                   </div>
-                              </div>
-
-                              <div class="item item-second">
-                                   <div class="caption">
-                                        <div class="col-md-offset-1 col-md-10">
-                                             <h3>Aenean luctus lobortis tellus</h3>
-                                             <h1>New Lifestyle</h1>
-                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
-                                        </div>
-                                   </div>
-                              </div>
-
-                              <div class="item item-third">
-                                   <div class="caption">
-                                        <div class="col-md-offset-1 col-md-10">
-                                             <h3>Pellentesque nec libero nisi</h3>
-                                             <h1>Your Health Benefits</h1>
-                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-
-               </div>
-          </div>
-     </section> -->
-
-
 
      <!-- ABOUT -->
      <section id="about">
@@ -130,15 +24,7 @@ http://www.tooplate.com/view/2098-health
                                         I am tested negative. Can I help someone?
                                    </p>
                                    <h4>We are here for you <i class="fa fa-user-md"></i></h4>
-                                   <!-- <h4>We are here for you<i class="fas fa-user-md"></i></h4> -->
                               </div>
-                              <!-- <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                                   <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
-                                   <figcaption>
-                                        <h3>Dr. Neil Jackson</h3>
-                                        <p>General Principal</p>
-                                   </figcaption>
-                              </figure> -->
                          </div>
                     </div>
 
@@ -165,14 +51,12 @@ http://www.tooplate.com/view/2098-health
                               <img src="assets/images/covid_test.jpg" class="img-responsive" alt="">
 
                               <div class="team-info">
-                                   <h3>Test Center</h3>
+                                   <h3><a [routerLink]="'/test-center'" (click)="testCenter()">Test
+                                             Center</a></h3>
                                    <p>Location information</p>
-                                   <!-- <div class="team-contact-info">
-                                        <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                        <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                   </div> -->
                                    <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-link"></a></li>
+                                        <li><a [routerLink]="'/test-center'" (click)="testCenter()"
+                                                  class="fa fa-link"></a></li>
                                         <li><a href="#" class="fa fa-home"></a></li>
                                    </ul>
                               </div>
@@ -185,14 +69,12 @@ http://www.tooplate.com/view/2098-health
                               <img src="assets/images/vaccination.jpg" class="img-responsive" alt="">
 
                               <div class="team-info">
-                                   <h3>Vaccination Center</h3>
+                                   <h3><a [routerLink]="'/vaccination-center'" (click)="vaccinationCenter()">Vaccination
+                                             Center</a></h3>
                                    <p>Location information</p>
-                                   <!-- <div class="team-contact-info">
-                                        <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                        <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                   </div> -->
                                    <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-link"></a></li>
+                                        <li><a [routerLink]="'/vaccination-center'" (click)="vaccinationCenter()"
+                                                  class="fa fa-link"></a></li>
                                         <li><a href="#" class="fa fa-home"></a></li>
                                    </ul>
                               </div>
@@ -205,14 +87,12 @@ http://www.tooplate.com/view/2098-health
                               <img src="assets/images/volunteer.jpg" class="img-responsive" alt="">
 
                               <div class="team-info">
-                                   <h3>Volunteer service</h3>
+                                   <h3><a [routerLink]="'/volunteer-list'" (click)="volunteerList()">Volunteer
+                                             service</a></h3>
                                    <p>Covid-19 Patient</p>
-                                   <!-- <div class="team-contact-info">
-                                        <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                        <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                   </div> -->
                                    <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-link"></a></li>
+                                        <li><a [routerLink]="'/volunteer-list'" (click)="volunteerList()"
+                                                  class="fa fa-link"></a></li>
                                         <li><a href="#" class="fa fa-home"></a></li>
                                    </ul>
                               </div>
@@ -346,10 +226,8 @@ http://www.tooplate.com/view/2098-health
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb">
                               <div class="opening-hours">
-                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
-                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
-                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-                                   <p>Sunday <span>Closed</span></p>
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">About Us</h4>
+                                   <p>Group Member <span></span></p>
                               </div>
 
                               <ul class="social-icon">
@@ -388,7 +266,6 @@ http://www.tooplate.com/view/2098-health
                </div>
           </div>
      </footer>
-
 </body>
 
 </html>

@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarModule } from './sidebar/sidebar.module';
-import { volunteerModule } from './volunteer/volanteer.module';
 import { RashedModule } from './rashed/rashed.module';
 import { HomePageModule } from './home/home.page.module';
 
@@ -17,9 +15,7 @@ import { HomePageModule } from './home/home.page.module';
     RouterModule,
     BrowserModule,
     AppRoutingModule,
-    SidebarModule,
     RashedModule,
-    volunteerModule,
     HomePageModule
   ],
   providers: [],

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+        width: 100%;
+        background-color: rgb(196, 191, 191);
+        overflow: auto;
+        padding: 0px;
+
+    }
+
+    .navbar a {
+        float: left;
+        padding: 12px;
+        color: rgb(15, 1, 1);
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navbar a:hover {
+        background-color: rgb(189, 185, 185);
+    }
+
+    .active {
+        background-color: #04AA6D;
+    }
+
+    @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar">
+                    <a href="index.html" class="navbar-brand"><i class="fa fa-user-md"></i>Covid-19 Assistant</a>
+                    <a [routerLink]="'/test-center'" (click)="testCenter()" class="nav-link"><span
+                            data-hover="Test Center">Test
+                            Center</span></a>
+                    <a [routerLink]="'/vaccination-center'" (click)="vaccinationCenter()" class="nav-link"><span
+                            data-hover="Vaccination Center">Vaccination
+                            Center</span></a>
+                    <a [routerLink]="'/'" class="nav-link"><span data-hover="Resume">Positive
+                            day</span></a>
+                    <a [routerLink]="'/'" class="nav-link"><span data-hover="Contact">Mental
+                            Health</span></a>
+                    <a [routerLink]="'/volunteer-list'" (click)="volunteerList()" style="font-size: large;"
+                        class="nav-link"><span data-hover="Volunteer">Volunteer service</span></a>
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

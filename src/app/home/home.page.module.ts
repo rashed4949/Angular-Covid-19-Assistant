@@ -1,20 +1,36 @@
 import { CommonModule } from "@angular/common";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { MatTableModule } from "@angular/material/table";
 import { RouterModule } from "@angular/router";
+import { NavbarComponent } from "../navbar/navbar.component";
 import { HomePageComponent } from "./home.page.component";
 import { HomePageRoutes } from "./home.page.route";
+import { TestCenterComponent } from "./test-center/test.center.component";
+import { VaccinationCenterComponent } from "./vaccination-center/vaccination.center.component";
+import { CreateVolunteerComponent } from "./volunteer/create/create.volunteer.component";
+import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.component";
 
 @NgModule({
-    imports: [ 
-         CommonModule,
-         RouterModule.forChild(HomePageRoutes)
-         ],
-    declarations: [ HomePageComponent ],
-    exports: [ 
+    imports: [
+        CommonModule,
+        RouterModule.forChild(HomePageRoutes),
+        MatTableModule
+    ],
+    declarations: [
+        HomePageComponent,
+        CreateVolunteerComponent,
+        NavbarComponent,
+        TestCenterComponent,
+        VaccinationCenterComponent,
+        ListVolunteerComponent
+    ],
+    exports: [
         RouterModule,
-        HomePageComponent
-     ],
-    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+        HomePageComponent,
+        CreateVolunteerComponent,
+        NavbarComponent
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class HomePageModule {}
+export class HomePageModule { }
