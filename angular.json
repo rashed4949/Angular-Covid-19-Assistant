@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "rxjs-compat"
+            ],
             "outputPath": "dist/Project-A",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -25,11 +28,11 @@
             ],
             "styles": [
               "src/styles.css",
-"src/assets/css/font-awesome.min.css",
-"src/assets/css/animate.css",
-"src/assets/css/owl.carousel.css",
-"src/assets/css/owl.theme.default.min.css",
-"src/assets/css/tooplate-style.css"
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/owl.carousel.css",
+              "src/assets/css/owl.theme.default.min.css",
+              "src/assets/css/tooplate-style.css"
             ],
             "scripts": [
               "src/assets/js/jquery.js",
@@ -39,7 +42,6 @@
               "src/assets/js/smoothscroll.js",
               "src/assets/js/owl.carousel.min.js",
               "src/assets/js/custom.js"
-  
             ]
           },
           "configurations": {
