@@ -1,11 +1,14 @@
+import { environment } from './../environments/environment';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RashedModule } from './rashed/rashed.module';
 import { HomePageModule } from './home/home.page.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +18,10 @@ import { HomePageModule } from './home/home.page.module';
     RouterModule,
     BrowserModule,
     AppRoutingModule,
-    RashedModule,
-    HomePageModule
+    HomePageModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

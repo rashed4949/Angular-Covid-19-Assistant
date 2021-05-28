@@ -22,5 +22,8 @@ export class HomePageComponent {
   volunteerList() {
     this.router.navigate(['/volunteer-list']);
   }
+  login() {
+    this.router.navigate(['/login']);
+  }
 
 }

@@ -1,7 +1,8 @@
 import { CommonModule } from "@angular/common";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import { MatTableModule } from "@angular/material/table";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
+import { LoginComponent } from "../login/login.component";
 import { NavbarComponent } from "../navbar/navbar.component";
 import { HomePageComponent } from "./home.page.component";
 import { HomePageRoutes } from "./home.page.route";
@@ -14,7 +15,8 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
     imports: [
         CommonModule,
         RouterModule.forChild(HomePageRoutes),
-        MatTableModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations: [
         HomePageComponent,
@@ -22,7 +24,8 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         NavbarComponent,
         TestCenterComponent,
         VaccinationCenterComponent,
-        ListVolunteerComponent
+        ListVolunteerComponent,
+        LoginComponent
     ],
     exports: [
         RouterModule,
