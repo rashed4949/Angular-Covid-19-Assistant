@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { LoginComponent } from "../login/login.component";
 import { NavbarComponent } from "../navbar/navbar.component";
+import { AuthService } from "../service/auth.service";
+import { VolunteerService } from "../service/volunteer.service";
 import { HomePageComponent } from "./home.page.component";
 import { HomePageRoutes } from "./home.page.route";
 import { TestCenterComponent } from "./test-center/test.center.component";
@@ -33,6 +35,9 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         CreateVolunteerComponent,
         NavbarComponent
     ],
+    providers: [
+        AuthService,
+        VolunteerService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

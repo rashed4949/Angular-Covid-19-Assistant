@@ -15,24 +15,20 @@
 
     <table id="myTable">
         <tr class="header">
-            <th style="width:60%;">Name</th>
-            <th style="width:40%;">Country</th>
+            <th style="width: 400px;">Name</th>
+            <th style="width: 400px;">Email</th>
+            <th style="width: 300px;">phoneNumber</th>
+            <th style="width: 300px;">City</th>
+            <th style="width: 300px;">Time from</th>
+            <th style="width: 300px;">Time To</th>
         </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Berglunds snabbkop</td>
-            <td>Sweden</td>
-        </tr>
-        <tr>
-            <td>Island Trading</td>
-            <td>UK</td>
-        </tr>
-        <tr>
-            <td>Koniglich Essen</td>
-            <td>Germany</td>
+        <tr *ngFor="let c of volunteers">
+            <td>{{c.name}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.phoneNumber}}</td>
+            <td>{{c.city}}</td>
+            <td>{{c.timeFrom}}</td>
+            <td>{{c.timeTo}}</td>
         </tr>
     </table>
 </div>
