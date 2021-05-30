@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { environment } from './../environments/environment';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +9,8 @@ import { HomePageModule } from './home/home.page.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AuthService } from './service/auth.service';
+import { VolunteerService } from './service/volunteer.service';
 
 
 @NgModule({
@@ -21,9 +24,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     HomePageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    VolunteerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
