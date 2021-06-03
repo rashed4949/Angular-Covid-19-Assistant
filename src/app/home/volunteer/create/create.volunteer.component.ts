@@ -32,11 +32,11 @@ export class CreateVolunteerComponent {
     private router: Router,
     private route: ActivatedRoute,
     private volunteerService: VolunteerService) {
-    this.prepareLCForm(null);
+    this.prepareVolunteerForm(null);
   }
 
 
-  prepareLCForm(volunteerInfofoFormData: VolunteerInfo) {
+  prepareVolunteerForm(volunteerInfofoFormData: VolunteerInfo) {
     volunteerInfofoFormData = volunteerInfofoFormData ? volunteerInfofoFormData : new VolunteerInfo();
     this.volunteerForm = this.formBuilder.group({
       name: [volunteerInfofoFormData.name, [Validators.required]],
@@ -53,7 +53,7 @@ export class CreateVolunteerComponent {
 
   get f() { return this.volunteerForm.controls; }
 
-  saveLcInfo() {
+  saveVolunterInfo() {
     this.submitted = true;
     if (this.volunteerForm.invalid) {
       return;
@@ -61,7 +61,7 @@ export class CreateVolunteerComponent {
     this.volunteerInfo = this.volunteerForm.value;
     console.log(this.volunteerInfo)
     this.volunteerService.createVolunteer(this.volunteerInfo);
-    this.prepareLCForm(null);
+    this.prepareVolunteerForm(null);
     this.myFunction();
     this.back();
   }

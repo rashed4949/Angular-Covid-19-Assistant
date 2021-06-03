@@ -3,8 +3,12 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { NgxPaginationModule } from "ngx-pagination";
+import { TestCenterFormComponent } from "../admin/test-center-panel/test.center.form.component";
+import { VaccinationCenterFormComponent } from "../admin/vaccination-center-panel/vaccination.center.form.component";
 import { LoginComponent } from "../login/login.component";
 import { NavbarComponent } from "../navbar/navbar.component";
+import { AdminAuthService } from "../service/admin.auth.guard.service";
+import { AdminPanelService } from "../service/admin.panel.service";
 import { VolunteerService } from "../service/volunteer.service";
 import { HomePageComponent } from "./home.page.component";
 import { HomePageRoutes } from "./home.page.route";
@@ -28,16 +32,22 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         TestCenterComponent,
         VaccinationCenterComponent,
         ListVolunteerComponent,
-        LoginComponent
+        LoginComponent,
+        TestCenterFormComponent,
+        VaccinationCenterFormComponent
     ],
     exports: [
         RouterModule,
         HomePageComponent,
         CreateVolunteerComponent,
-        NavbarComponent
+        NavbarComponent,
+        TestCenterFormComponent,
+        VaccinationCenterFormComponent
     ],
     providers: [
-        VolunteerService],
+        VolunteerService,
+        AdminAuthService,
+        AdminPanelService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

@@ -21,7 +21,7 @@
             <th style="width: 300px;">Time from</th>
             <th style="width: 300px;">Time To</th>
         </tr>
-        <tr *ngFor="let c of filterData | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+        <tr *ngFor="let c of filterData | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
             <td>{{c.name}}</td>
             <td>{{c.email}}</td>
             <td>{{c.phoneNumber}}</td>

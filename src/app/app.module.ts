@@ -11,6 +11,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { VolunteerService } from './service/volunteer.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AdminAuthService } from './service/admin.auth.guard.service';
+import { AdminPanelService } from './service/admin.panel.service';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgxPaginationModule
   ],
   providers: [
-    VolunteerService],
+    VolunteerService,
+    AdminAuthService,
+    AdminPanelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
