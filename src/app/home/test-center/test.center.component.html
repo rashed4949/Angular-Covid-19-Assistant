@@ -1,31 +1,23 @@
-<!-- <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <input type="text" placeholder="Search..">
-</div> -->
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<input type="text" id="myInput" (keyup)='searchFunction($event.target.value)' placeholder="Search for...">
 
 <table id="myTable">
     <tr class="header">
-        <th style="width:60%;">Name</th>
-        <th style="width:40%;">Country</th>
+        <th style="width: 600px;">Name</th>
+        <th style="width: 300px;">City</th>
+        <th style="width: 600px;">Address</th>
+        <th style="width: 300px;">Phone</th>
+        <th style="width: 300px;">Time from</th>
+        <th style="width: 200px;">Time To</th>
+        <th style="width: 500px;">Website</th>
     </tr>
-    <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Germany</td>
-    </tr>
-    <tr>
-        <td>Berglunds snabbkop</td>
-        <td>Sweden</td>
-    </tr>
-    <tr>
-        <td>Island Trading</td>
-        <td>UK</td>
-    </tr>
-    <tr>
-        <td>Koniglich Essen</td>
-        <td>Germany</td>
+    <tr *ngFor="let c of filterData | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+        <td>{{c.name}}</td>
+        <td>{{c.city}}</td>
+        <td>{{c.address}}</td>
+        <td>{{c.phoneNumber}}</td>
+        <td>{{c.timeFrom}}</td>
+        <td>{{c.timeTo}}</td>
+        <td>{{c.email}}</td>
     </tr>
 </table>
+<pagination-controls style="float: right;" (pageChange)="p = $event"></pagination-controls>
