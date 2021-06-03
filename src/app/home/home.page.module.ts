@@ -2,9 +2,9 @@ import { CommonModule } from "@angular/common";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
+import { NgxPaginationModule } from "ngx-pagination";
 import { LoginComponent } from "../login/login.component";
 import { NavbarComponent } from "../navbar/navbar.component";
-import { AuthService } from "../service/auth.service";
 import { VolunteerService } from "../service/volunteer.service";
 import { HomePageComponent } from "./home.page.component";
 import { HomePageRoutes } from "./home.page.route";
@@ -18,7 +18,8 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         CommonModule,
         RouterModule.forChild(HomePageRoutes),
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxPaginationModule
     ],
     declarations: [
         HomePageComponent,
@@ -36,7 +37,6 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         NavbarComponent
     ],
     providers: [
-        AuthService,
         VolunteerService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
