@@ -13,10 +13,10 @@
         <h6 class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s">
             <span>Profile</span>
         </h6>
-        <button *ngIf="!user" class="btn btn-primary" (click)="authService.GoogleAuth()">Login with Google</button>
+        <button *ngIf="!user" class="btn btn-primary" (click)="GoogleAuth()">Login with Google</button>
         <button *ngIf="user" class="btn btn-primary" (click)="logout()">Logout</button>
         <br><br><br><br>
-        <div *ngIf="user">
+        <div *ngIf="isAdmin">
             <h4>Admin Panel</h4>
             <h6 class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s">
                 <span>Test center</span>

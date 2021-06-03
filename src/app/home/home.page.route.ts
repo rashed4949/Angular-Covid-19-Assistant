@@ -11,7 +11,7 @@ export const HomePageRoutes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'home-page', component: HomePageComponent },
     { path: 'volunteer-list', component: ListVolunteerComponent },
-    { path: 'volunteer-create', component: CreateVolunteerComponent },
+    { path: 'volunteer-list/create', component: CreateVolunteerComponent },
     { path: 'test-center', component: TestCenterComponent },
     { path: 'vaccination-center', component: VaccinationCenterComponent },
     { path: 'login', component: LoginComponent }

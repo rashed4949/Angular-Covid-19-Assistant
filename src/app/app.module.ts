@@ -9,8 +9,8 @@ import { HomePageModule } from './home/home.page.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AuthService } from './service/auth.service';
 import { VolunteerService } from './service/volunteer.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -25,10 +25,10 @@ import { VolunteerService } from './service/volunteer.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [
-    AuthService,
     VolunteerService],
   bootstrap: [AppComponent]
 })

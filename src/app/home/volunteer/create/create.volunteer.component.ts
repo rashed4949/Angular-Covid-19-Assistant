@@ -1,12 +1,12 @@
 import { VolunteerService } from './../../../service/volunteer.service';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 export class VolunteerInfo {
   name: string;
   phoneNumber: string;
-  cPassword: string
   password: string
   email: string
   interest: string
@@ -15,6 +15,7 @@ export class VolunteerInfo {
   timeFrom: string
   sDate: Date;
 }
+
 @Component({
   selector: 'create-volunteer',
   templateUrl: './create.volunteer.component.html',
@@ -24,7 +25,12 @@ export class CreateVolunteerComponent {
 
   volunteerInfo: VolunteerInfo = new VolunteerInfo();
   volunteerForm: FormGroup;
+  submitted = false;
+
+
   constructor(private formBuilder: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
     private volunteerService: VolunteerService) {
     this.prepareLCForm(null);
   }
@@ -33,23 +39,38 @@ export class CreateVolunteerComponent {
   prepareLCForm(volunteerInfofoFormData: VolunteerInfo) {
     volunteerInfofoFormData = volunteerInfofoFormData ? volunteerInfofoFormData : new VolunteerInfo();
     this.volunteerForm = this.formBuilder.group({
-      name: [volunteerInfofoFormData.name],
-      phoneNumber: [volunteerInfofoFormData.phoneNumber],
-      cPassword: [volunteerInfofoFormData.cPassword],
-      password: [volunteerInfofoFormData.password],
-      email: [volunteerInfofoFormData.email],
+      name: [volunteerInfofoFormData.name, [Validators.required]],
+      phoneNumber: [volunteerInfofoFormData.phoneNumber, [Validators.required]],
+      password: [volunteerInfofoFormData.password, [Validators.required, Validators.minLength(6)]],
+      email: [volunteerInfofoFormData.email, [Validators.required]],
       interest: [volunteerInfofoFormData.interest],
-      city: [volunteerInfofoFormData.city],
-      timeTo: [volunteerInfofoFormData.timeTo],
-      timeFrom: [volunteerInfofoFormData.timeFrom],
-      sDate: [volunteerInfofoFormData.sDate]
+      city: [volunteerInfofoFormData.city, [Validators.required]],
+      timeTo: [volunteerInfofoFormData.timeTo, [Validators.required]],
+      timeFrom: [volunteerInfofoFormData.timeFrom, [Validators.required]],
+      sDate: [volunteerInfofoFormData.sDate, [Validators.required]]
     })
   }
 
+  get f() { return this.volunteerForm.controls; }
+
   saveLcInfo() {
+    this.submitted = true;
+    if (this.volunteerForm.invalid) {
+      return;
+    }
     this.volunteerInfo = this.volunteerForm.value;
     console.log(this.volunteerInfo)
     this.volunteerService.createVolunteer(this.volunteerInfo);
     this.prepareLCForm(null);
+    this.myFunction();
+    this.back();
+  }
+
+  myFunction() {
+    alert("You are successfully resigtered. Welcome!!!");
+  }
+  back() {
+    this.router.navigate(['../'], { relativeTo: this.route });
+
   }
 }
