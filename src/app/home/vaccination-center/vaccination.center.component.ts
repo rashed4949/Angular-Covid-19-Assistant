@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { AdminPanelService } from "src/app/service/admin.panel.service";
 
@@ -15,8 +14,7 @@ export class VaccinationCenterComponent implements OnInit, OnDestroy {
     subscription: Subscription;
 
 
-    constructor(private route: ActivatedRoute,
-        private router: Router,
+    constructor(
         private adminPanelService: AdminPanelService
     ) {
     }

@@ -2,19 +2,8 @@ import { VolunteerService } from './../../../service/volunteer.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { VolunteerInfo } from '../../../models/volunteer.registration.model';
 
-
-export class VolunteerInfo {
-  name: string;
-  phoneNumber: string;
-  password: string
-  email: string
-  interest: string
-  city: string
-  timeTo: string
-  timeFrom: string
-  sDate: Date;
-}
 
 @Component({
   selector: 'create-volunteer',

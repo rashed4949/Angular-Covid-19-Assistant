@@ -1,6 +1,5 @@
 import { AdminPanelService } from './../../service/admin.panel.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -15,8 +14,7 @@ export class TestCenterComponent implements OnInit, OnDestroy {
     subscription: Subscription;
 
 
-    constructor(private route: ActivatedRoute,
-        private router: Router,
+    constructor(
         private adminPanelService: AdminPanelService
     ) {
     }

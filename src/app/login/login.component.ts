@@ -5,7 +5,9 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { auth } from 'firebase/app';
 import { ActivatedRoute, Router } from '@angular/router';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({
+    templateUrl: 'login.component.html'
+})
 
 export class LoginComponent implements OnInit {
 
@@ -19,8 +21,6 @@ export class LoginComponent implements OnInit {
         private db: AngularFireDatabase,
         private router: Router,
         private route: ActivatedRoute) {
-
-
         this.afAuth.authState.subscribe(user => { this.user = user })
     }
 
@@ -43,7 +43,6 @@ export class LoginComponent implements OnInit {
         this.isAdmin = false;
         localStorage.clear();
     }
-
 
     GoogleAuth() {
         return this.AuthLogin(new auth.GoogleAuthProvider());

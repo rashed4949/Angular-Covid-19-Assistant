@@ -2,21 +2,7 @@ import { AdminPanelService } from './../../service/admin.panel.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-
-
-export class TestCenterInfo {
-    name: string;
-    phoneNumber: string;
-    email: string
-    city: string
-    timeTo: string
-    timeFrom: string;
-    address: string;
-    apRequired: string;
-    website: string;
-
-
-}
+import { TestCenterInfo } from '../../models/test.center.model';
 
 @Component({
     selector: 'test-center-panel',
@@ -63,14 +49,14 @@ export class TestCenterFormComponent {
         this.adminPanelService.createTestCenter(this.testCenterInfo);
         this.myFunction();
         this.prepareTestCenterForm(null);
-        // this.back();
+        this.back();
     }
 
     myFunction() {
         alert("You are successfully inserted data.");
     }
     back() {
-        this.router.navigate(['../'], { relativeTo: this.route });
+        this.router.navigate(['/login']);
 
     }
 }

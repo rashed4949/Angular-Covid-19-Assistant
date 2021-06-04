@@ -1,22 +1,9 @@
 import { Component } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import { AdminPanelService } from "src/app/service/admin.panel.service";
+import { VaccinationCenterInfo } from "../../models/vaccination.center.model";
+import { AdminPanelService } from "../../service/admin.panel.service";
 
-
-export class VaccinationCenterInfo {
-    name: string;
-    phoneNumber: string;
-    email: string
-    city: string
-    timeTo: string
-    timeFrom: string;
-    address: string;
-    apRequired: string;
-    website: string;
-
-
-}
 
 @Component({
     selector: 'test-center-panel',
