@@ -2,22 +2,20 @@
 
 <table id="myTable">
     <tr class="header">
-        <th style="width: 600px;">Name</th>
+        <th style="width: 700px;">Name</th>
         <th style="width: 300px;">City</th>
         <th style="width: 600px;">Address</th>
-        <th style="width: 300px;">Phone</th>
-        <th style="width: 300px;">Time from</th>
-        <th style="width: 200px;">Time To</th>
-        <th style="width: 500px;">Website</th>
+        <th style="width: 400px;">Phone</th>
+        <th style="width: 650px;text-align: center;">Time</th>
+        <th style="width: 400px;text-align: center;">Website</th>
     </tr>
     <tr *ngFor="let c of filterData | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
         <td>{{c.name}}</td>
         <td>{{c.city}}</td>
         <td>{{c.address}}</td>
         <td>{{c.phoneNumber}}</td>
-        <td>{{c.timeFrom}}</td>
-        <td>{{c.timeTo}}</td>
-        <td>{{c.email}}</td>
+        <td>{{c.timeFrom}} - {{c.timeTo}}</td>
+        <td>{{c.website}}</td>
     </tr>
 </table>
 <pagination-controls style="float: right;" (pageChange)="p = $event"></pagination-controls>

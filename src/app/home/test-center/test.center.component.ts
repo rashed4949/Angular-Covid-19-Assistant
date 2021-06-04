@@ -39,7 +39,8 @@ export class TestCenterComponent implements OnInit, OnDestroy {
             this.filterData = this.testCenters.filter(x =>
                 x.name.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
                 x.city.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
-                x.phoneNumber.trim().toLowerCase().includes(term.trim().toLowerCase())
+                x.phoneNumber.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
+                x.address.trim().toLowerCase().includes(term.trim().toLowerCase())
             );
         }
     }

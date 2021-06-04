@@ -39,7 +39,8 @@ export class VaccinationCenterComponent implements OnInit, OnDestroy {
             this.filterData = this.vaccinationCenters.filter(x =>
                 x.name.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
                 x.city.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
-                x.phoneNumber.trim().toLowerCase().includes(term.trim().toLowerCase())
+                x.phoneNumber.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
+                x.address.trim().toLowerCase().includes(term.trim().toLowerCase())
             );
         }
     }
