@@ -31,5 +31,8 @@ export class NavbarComponent implements OnInit {
   login() {
     this.router.navigate(['/login']);
   }
+  newsPortalList() {
+    this.router.navigate(['/news-portal']);
+  }
 
 }

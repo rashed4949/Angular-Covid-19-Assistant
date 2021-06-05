@@ -116,47 +116,25 @@
                               <h2>Positive News</h2>
                          </div>
                     </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="assets/images/covid_test.jpg" class="img-responsive" alt="">
-
-                              <div class="news-info">
-                                   <span>May 10, 2020</span>
-                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
-                                   <p>Read from the API services</p>
+                    <ng-container
+                         *ngFor="let c of filterData.slice().reverse() | paginate: { itemsPerPage: 4, currentPage: p }; let i = index;">
+                         <div class="col-md-3">
+                              <div class="card" style="overflow: hidden; height: 30rem; margin-bottom: 15px;">
+                                   <img [src]="c.imageUrl" class="card-img-top">
+                                   <div class="card-body">
+                                        <h5 class="card-title">{{c.title}}</h5>
+                                        <p class="card-title">
+                                             <strong>{{c.category}}</strong>
+                                        </p>
+                                        <p class="card-text">{{c.description}}</p>
+                                        <a [attr.href]="c.website" target="_blank" class="card-link">{{c.website}}</a>
+                                   </div>
                               </div>
                          </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="assets/images/vaccination.jpg" class="img-responsive" alt="">
-
-                              <div class="news-info">
-                                   <span>June 20, 2020</span>
-                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
-                                   <p>Read from the API services</p>
-                              </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.8s">
-                              <img src="assets/images/volunteer.jpg" class="img-responsive" alt="">
-
-                              <div class="news-info">
-                                   <span>March 22, 2021</span>
-                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
-                                   <p>Read from the API services</p>
-                              </div>
-                         </div>
-                    </div>
-
+                         <div *ngIf="(i+1) % 4 == 0" class="w-100"></div>
+                    </ng-container>
                </div>
+               <pagination-controls style="float: right;" (pageChange)="p = $event"></pagination-controls>
           </div>
      </section>
 

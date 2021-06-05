@@ -27,4 +27,12 @@ export class AdminPanelService {
     getAllVaccinationCenter() {
         return this.db.list('/vaccination-centers');
     }
+
+    createNewsPortal(newsPortalInfo) {
+        return this.db.list('/news-portal').push(newsPortalInfo);
+    }
+
+    getAllNewsPortal() {
+        return this.db.list('/news-portal');
+    }
 }

@@ -1,3 +1,6 @@
+<div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+    <h3 style="text-align: center;margin-top: 20px;">Covid-19 Vaccination Centers</h3>
+</div>
 <input type="text" id="myInput" (keyup)='searchFunction($event.target.value)' placeholder="Search for...">
 
 <table id="myTable">
@@ -6,7 +9,7 @@
         <th style="width: 300px;">City</th>
         <th style="width: 600px;">Address</th>
         <th style="width: 400px;">Phone</th>
-        <th style="width: 650px;text-align: center;">Time</th>
+        <th style="width: 850px;text-align: center;">Time</th>
         <th style="width: 400px;text-align: center;">Website</th>
     </tr>
     <tr *ngFor="let c of filterData | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">

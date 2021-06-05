@@ -84,6 +84,9 @@ export class LoginComponent implements OnInit {
     vaccinationCenterCreate() {
         this.router.navigate(['/vaccination-center-form']);
     }
+    newsPortalCreate() {
+        this.router.navigate(['/news-portal-form']);
+    }
 }
 
 

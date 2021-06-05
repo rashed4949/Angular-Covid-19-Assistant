@@ -1,3 +1,4 @@
+import { NewsPortalListComponent } from './news-portal/news.portal.list.component';
 import { AdminAuthService } from './../service/admin.auth.guard.service';
 import { TestCenterFormComponent } from './../admin/test-center-panel/test.center.form.component';
 
@@ -9,6 +10,7 @@ import { VaccinationCenterComponent } from "./vaccination-center/vaccination.cen
 import { CreateVolunteerComponent } from "./volunteer/create/create.volunteer.component";
 import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.component";
 import { VaccinationCenterFormComponent } from '../admin/vaccination-center-panel/vaccination.center.form.component';
+import { NewsPortalFormComponent } from '../admin/news-portal-panel/news.portal.form.component';
 
 export const HomePageRoutes: Routes = [
     { path: '', component: HomePageComponent },
@@ -18,8 +20,10 @@ export const HomePageRoutes: Routes = [
     { path: 'test-center', component: TestCenterComponent },
     { path: 'vaccination-center', component: VaccinationCenterComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'news-portal', component: NewsPortalListComponent },
     { path: 'test-center-form', component: TestCenterFormComponent, canActivate: [AdminAuthService] },
-    { path: 'vaccination-center-form', component: VaccinationCenterFormComponent, canActivate: [AdminAuthService] }
+    { path: 'vaccination-center-form', component: VaccinationCenterFormComponent, canActivate: [AdminAuthService] },
+    { path: 'news-portal-form', component: NewsPortalFormComponent, canActivate: [AdminAuthService] }
 
 
 
