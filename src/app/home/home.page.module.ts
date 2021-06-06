@@ -18,6 +18,7 @@ import { TestCenterComponent } from "./test-center/test.center.component";
 import { VaccinationCenterComponent } from "./vaccination-center/vaccination.center.component";
 import { CreateVolunteerComponent } from "./volunteer/create/create.volunteer.component";
 import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.component";
+import { VolunteerLoginComponent } from "./volunteer/volunteer-login/volunteer.login.component";
 
 @NgModule({
     imports: [
@@ -38,7 +39,8 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         TestCenterFormComponent,
         VaccinationCenterFormComponent,
         NewsPortalListComponent,
-        NewsPortalFormComponent
+        NewsPortalFormComponent,
+        VolunteerLoginComponent
     ],
     exports: [
         RouterModule,
@@ -48,7 +50,8 @@ import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.componen
         TestCenterFormComponent,
         VaccinationCenterFormComponent,
         NewsPortalListComponent,
-        NewsPortalFormComponent
+        NewsPortalFormComponent,
+        VolunteerLoginComponent
     ],
     providers: [
         VolunteerService,

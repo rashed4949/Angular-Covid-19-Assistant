@@ -1,12 +1,16 @@
 <div class="row"
     style="margin-top: 5px; padding-top: 35px;background: url('assets/images/vol5.jpg') no-repeat top center;">
-    <div class="col-sm-6 col-md-8">
-        <h2 style="text-align: center;" class="wow fadeInUp" data-wow-delay="0.4s">Want to be a Volunteer?</h2>
+    <div class="col-sm-6 col-md-6">
+        <h4 style="text-align: center;" class="wow fadeInUp" data-wow-delay="0.4s">Are you already a Volunteer?</h4>
+        <h5 class="wow fadeInUp" style="color: green;text-align: center;" data-wow-delay="0.4s"> <a
+                [routerLink]="'/volunteer-login'" (click)="volunteerLogin()" class="nav-link"><span>Sign in</span></a>
+        </h5>
     </div>
-    <div class="col-sm-6  col-md-4">
-        <h2 class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s"> <a [routerLink]="'/volunteer-create'"
-                (click)="createVolunteer()" class="nav-link"><span>Join
-                    us now</span></a></h2>
+    <div class="col-sm-6  col-md-6">
+        <h4 style="text-align: center;" class="wow fadeInUp" data-wow-delay="0.4s">Want to be a Volunteer?</h4>
+        <h5 class="wow fadeInUp" style="color: green;text-align: center;" data-wow-delay="0.4s"> <a
+                [routerLink]="'/volunteer-create'" (click)="createVolunteer()" class="nav-link"><span>Join
+                    us now</span></a></h5>
     </div>
 </div>
 <div class="container">
@@ -16,18 +20,20 @@
         <tr class="header">
             <th style="width: 600px;">Name</th>
             <th style="width: 400px;">Email</th>
-            <th style="width: 300px;">phoneNumber</th>
+            <th style="width: 300px;">Phone number</th>
             <th style="width: 300px;">City</th>
-            <th style="width: 300px;">Time from</th>
-            <th style="width: 300px;">Time To</th>
+            <th style="width: 550px;">Time</th>
+            <th style="width: 400px;">Status</th>
+
         </tr>
         <tr *ngFor="let c of filterData | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
             <td>{{c.name}}</td>
             <td>{{c.email}}</td>
             <td>{{c.phoneNumber}}</td>
             <td>{{c.city}}</td>
-            <td>{{c.timeFrom}}</td>
-            <td>{{c.timeTo}}</td>
+            <td>{{c.timeFrom}}- {{c.timeTo}}</td>
+            <td>{{c.status}}</td>
+
         </tr>
     </table>
     <pagination-controls style="float: right;" (pageChange)="p = $event"></pagination-controls>

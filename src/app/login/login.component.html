@@ -7,9 +7,6 @@
         <h2 *ngIf="user" class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s">
             <span>Welcome {{ user.displayName }} ! </span>
         </h2>
-        <h6 class="wow fadeInUp" style="color: green;" data-wow-delay="0.4s">
-            <span>Profile</span>
-        </h6>
         <button *ngIf="!user" class="btn btn-primary" (click)="GoogleAuth()">Login with Google</button>
         <button *ngIf="user" class="btn btn-primary" (click)="logout()">Logout</button>
         <br><br><br><br>

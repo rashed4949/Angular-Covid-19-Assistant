@@ -8,4 +8,5 @@ export class VolunteerInfo {
     timeTo: string
     timeFrom: string
     sDate: Date;
+    status: string;
 }

@@ -71,6 +71,18 @@
                                    <div *ngIf="f.city.errors.required">City is required</div>
                               </div>
                          </div>
+                         <div class="col">
+                              <label for="select">Status</label>
+                              <select formControlName="status" class="form-control"
+                                   [ngClass]="{ 'is-invalid': submitted && f.status.errors }">
+                                   <option>Active</option>
+                                   <option>Inactive</option>
+                                   <option>Temporary Inactive</option>
+                              </select>
+                              <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+                                   <div *ngIf="f.status.errors.required">status is required</div>
+                              </div>
+                         </div>
                     </div>
                     <div class="row">
                          <div class="col">

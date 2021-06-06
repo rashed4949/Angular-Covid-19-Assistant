@@ -33,6 +33,9 @@ export class ListVolunteerComponent implements OnInit, OnDestroy {
     createVolunteer() {
         this.router.navigate(['create'], { relativeTo: this.route });
     }
+    volunteerLogin() {
+        this.router.navigate(['login'], { relativeTo: this.route });
+    }
 
     filterData: any[];
     searchFunction(term: string) {
@@ -43,7 +46,9 @@ export class ListVolunteerComponent implements OnInit, OnDestroy {
                 x.name.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
                 x.city.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
                 x.phoneNumber.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
-                x.email.trim().toLowerCase().includes(term.trim().toLowerCase())
+                x.email.trim().toLowerCase().includes(term.trim().toLowerCase()) ||
+                x.status.trim().toLowerCase().includes(term.trim().toLowerCase())
+
             );
         }
     }

@@ -36,7 +36,8 @@ export class CreateVolunteerComponent {
       city: [volunteerInfofoFormData.city, [Validators.required]],
       timeTo: [volunteerInfofoFormData.timeTo, [Validators.required]],
       timeFrom: [volunteerInfofoFormData.timeFrom, [Validators.required]],
-      sDate: [volunteerInfofoFormData.sDate, [Validators.required]]
+      sDate: [volunteerInfofoFormData.sDate, [Validators.required]],
+      status: [volunteerInfofoFormData.status, [Validators.required]]
     })
   }
 

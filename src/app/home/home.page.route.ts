@@ -11,11 +11,13 @@ import { CreateVolunteerComponent } from "./volunteer/create/create.volunteer.co
 import { ListVolunteerComponent } from "./volunteer/list/list.volunteer.component";
 import { VaccinationCenterFormComponent } from '../admin/vaccination-center-panel/vaccination.center.form.component';
 import { NewsPortalFormComponent } from '../admin/news-portal-panel/news.portal.form.component';
+import { VolunteerLoginComponent } from './volunteer/volunteer-login/volunteer.login.component';
 
 export const HomePageRoutes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'home-page', component: HomePageComponent },
     { path: 'volunteer-list', component: ListVolunteerComponent },
+    { path: 'volunteer-list/login', component: VolunteerLoginComponent },
     { path: 'volunteer-list/create', component: CreateVolunteerComponent },
     { path: 'test-center', component: TestCenterComponent },
     { path: 'vaccination-center', component: VaccinationCenterComponent },

@@ -58,11 +58,11 @@
                     <a [routerLink]="'/'" class="nav-link"><span data-hover="Contact">Mental
                             Health</span></a>
                     <a [routerLink]="'/volunteer-list'" (click)="volunteerList()" style="font-size: large;"
-                        class="nav-link"><span data-hover="Volunteer">Volunteer service</span></a>
-                    <a *ngIf="!user" [routerLink]="'/login'" style="font-size: large;" class="nav-link"><span
-                            data-hover="Volunteer"></span><i class="fa fa-fw fa-user"></i>Login</a>
-                    <a *ngIf="user" [routerLink]="'/login'" style="font-size: large;" class="nav-link"><span
-                            data-hover="Volunteer"></span><i class="fa fa-fw fa-user"></i>{{user.displayName}}</a>
+                        class="nav-link"><span data-hover="Volunteer">Volunteer Service</span></a>
+                    <a [routerLink]="'/login'" style="font-size: large;" class="nav-link"><span
+                            data-hover="Volunteer"></span><i class="fa fa-fw fa-user"></i>Admin Panel</a>
+                    <!-- <a *ngIf="user" [routerLink]="'/login'" style="font-size: large;" class="nav-link"><span
+                            data-hover="Volunteer"></span><i class="fa fa-fw fa-user"></i>{{user.displayName}}</a> -->
                 </div>
             </div>
         </div>
