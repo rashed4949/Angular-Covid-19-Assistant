@@ -25,6 +25,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.adminPanelService.getAllNewsPortal().valueChanges().subscribe(data => {
       this.filterData = this.newsPortal = data;
+      this.filterData = this.filterData.slice().reverse();
     })
   }
 

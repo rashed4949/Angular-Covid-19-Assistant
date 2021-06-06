@@ -24,6 +24,7 @@ export class NewsPortalListComponent implements OnInit {
     ngOnInit(): void {
         this.subscription = this.adminPanelService.getAllNewsPortal().valueChanges().subscribe(data => {
             this.filterData = this.newsPortal = data;
+            this.filterData = this.filterData.slice().reverse();
         })
 
 

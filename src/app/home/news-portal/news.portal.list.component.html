@@ -4,10 +4,9 @@
 <div class="container">
     <input type="text" id="myInput" (keyup)='searchFunction($event.target.value)' placeholder="Search for...">
     <div class="row">
-        <ng-container
-            *ngFor="let c of filterData.slice().reverse() | paginate: { itemsPerPage: 8, currentPage: p }; let i = index">
+        <ng-container *ngFor="let c of filterData | paginate: { itemsPerPage: 8, currentPage: p }; let i = index">
             <div class="col-md-3">
-                <div class="card" style="overflow: hidden; height: 30rem; margin-bottom: 15px;">
+                <div class="card" style="overflow: hidden; height: 30rem; margin-bottom: 25px;">
                     <img [src]="c.imageUrl" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">{{c.title}}</h5>

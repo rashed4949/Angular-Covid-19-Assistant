@@ -117,7 +117,7 @@
                          </div>
                     </div>
                     <ng-container
-                         *ngFor="let c of filterData.slice().reverse() | paginate: { itemsPerPage: 4, currentPage: p }; let i = index;">
+                         *ngFor="let c of filterData | paginate: { itemsPerPage: 4, currentPage: p }; let i = index;">
                          <div class="col-md-3">
                               <div class="card" style="overflow: hidden; height: 30rem; margin-bottom: 15px;">
                                    <img [src]="c.imageUrl" class="card-img-top">
