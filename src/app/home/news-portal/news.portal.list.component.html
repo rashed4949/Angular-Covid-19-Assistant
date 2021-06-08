@@ -9,12 +9,14 @@
                 <div class="card" style="overflow: hidden; height: 30rem; margin-bottom: 25px;">
                     <img [src]="c.imageUrl" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">{{c.title}}</h5>
-                        <p class="card-title">
-                            <strong>{{c.category}}</strong>
-                        </p>
+                        <h5 class="card-title"><a [attr.href]="c.website" target="_blank"
+                                class="card-link">{{c.title}}</a>
+                            <p class="card-title"> <strong>{{c.category}}</strong>
+                            </p>
+                        </h5>
+
                         <p class="card-text">{{c.description}}</p>
-                        <a [attr.href]="c.website" target="_blank" class="card-link">{{c.website}}</a>
+                        <!-- <a [attr.href]="c.website" target="_blank" class="card-link">{{c.website}}</a> -->
                     </div>
                 </div>
             </div>
