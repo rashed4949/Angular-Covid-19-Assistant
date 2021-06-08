@@ -45,7 +45,8 @@
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar">
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-user-md"></i>Covid-19 Assistant</a>
+                    <a [routerLink]="'/home-page'" class="navbar-brand"><i class="fa fa-user-md"></i>Covid-19
+                        Assistant</a>
                     <a [routerLink]="'/test-center'" (click)="testCenter()" class="nav-link"><span
                             data-hover="Test Center">Test
                             Center</span></a>
