@@ -34,5 +34,8 @@ export class NavbarComponent implements OnInit {
   newsPortalList() {
     this.router.navigate(['/news-portal']);
   }
+  mentalHealth() {
+    this.router.navigate(['/mental-health']);
+  }
 
 }

@@ -13,6 +13,7 @@ import { AdminPanelService } from "../service/admin.panel.service";
 import { VolunteerService } from "../service/volunteer.service";
 import { HomePageComponent } from "./home.page.component";
 import { HomePageRoutes } from "./home.page.route";
+import { MentalHealthComponent } from "./mental-health/mental.health.component";
 import { NewsPortalListComponent } from "./news-portal/news.portal.list.component";
 import { TestCenterComponent } from "./test-center/test.center.component";
 import { VaccinationCenterComponent } from "./vaccination-center/vaccination.center.component";
@@ -40,7 +41,8 @@ import { VolunteerLoginComponent } from "./volunteer/volunteer-login/volunteer.l
         VaccinationCenterFormComponent,
         NewsPortalListComponent,
         NewsPortalFormComponent,
-        VolunteerLoginComponent
+        VolunteerLoginComponent,
+        MentalHealthComponent
     ],
     exports: [
         RouterModule,

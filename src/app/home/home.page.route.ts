@@ -1,3 +1,4 @@
+import { MentalHealthComponent } from './mental-health/mental.health.component';
 import { NewsPortalListComponent } from './news-portal/news.portal.list.component';
 import { AdminAuthService } from './../service/admin.auth.guard.service';
 import { TestCenterFormComponent } from './../admin/test-center-panel/test.center.form.component';
@@ -21,6 +22,7 @@ export const HomePageRoutes: Routes = [
     { path: 'volunteer-list/create', component: CreateVolunteerComponent },
     { path: 'test-center', component: TestCenterComponent },
     { path: 'vaccination-center', component: VaccinationCenterComponent },
+    { path: 'mental-health', component: MentalHealthComponent },
     { path: 'login', component: LoginComponent },
     { path: 'news-portal', component: NewsPortalListComponent },
     { path: 'test-center-form', component: TestCenterFormComponent, canActivate: [AdminAuthService] },
